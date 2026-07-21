@@ -1,5 +1,5 @@
-// CRUD Tests - Job Board
-describe('CRUD Operations - Job Board', () => {
+// CRUD Tests - 06 Job Board
+describe('CRUD Operations - 06 Job Board', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.get('.nav-link[data-page="jobs"]').click();
@@ -105,7 +105,7 @@ describe('CRUD Operations - Job Board', () => {
     cy.request({
       method: 'POST',
       url: '/api/jobs',
-      body: {"title":"Test Job Position","company":"Test Company","location":"Dublin","salary":"€60000","type":"Full-time","description":"Test job description","category":"Engineering"},
+      body: {"title": "Test Job Position", "company": "Test Company", "location": "Dublin", "salary": "60000", "type": "Full-time", "description": "Test job", "category": "Engineering"},
     }).its('status').should('eq', 201);
   });
 
